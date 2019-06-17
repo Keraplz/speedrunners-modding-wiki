@@ -1,6 +1,24 @@
 
 # Trail files
 
+## Contents
+
+- [Overview](##overview)
+- [File format](##file-format)
+  - [settings.trail](####settings.trail)
+  - [icon](####icon)
+  - [.png](####.png)
+  - [file.png](####file.png)
+- [Layers](##layers)
+  - [Stripe](####Stripe)
+  - [Particle](####Particle)
+  - [Animation](####Animation)
+- [Properties](##properties)
+  - [Stripe Layer](###Stripe-Layer)
+  - [Particle Layer](###Particle-Layer)
+  - [Animation Layer](###Animation-Layer)
+- [Tools / Resources](##tools--resources)
+
 ## Overview
 
 Trail files are used by the game to render trails.
@@ -13,7 +31,7 @@ A normal trail file will have the following files:
 
 #### settings.trail
 
-This contains the properties and their values for each layer. The file structure is defined like this: 
+This contains the properties and their values for each layer. The file structure is defined like this:
 
 ```c
 typedef struct Image {
@@ -21,21 +39,21 @@ typedef struct Image {
     char name[name_length];
     byte image_lengthl
     char image[image_length];
-}
+};
 
 typedef struct Layer {
     byte type_length;
     char type[type_length];
     byte properties_length;
     Property properties[property_length];
-}
+};
 
 typedef struct Property {
     byte name_length;
     char name[name_length];
     byte value_length;
     char value[value_length];
-}
+};
 
 int version;
 byte name_length;
