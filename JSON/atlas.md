@@ -27,36 +27,23 @@ Sample .json file
 .json Documentation
 
 * ``frames``: A list containing all the animation frames
-  * ``filename``: The name of the animation plus the file extension (normally a .png)
-  * ``frame``: Data related to this frame within the sheet
-    * ``x``: The horizontal position of this frame within the sheet, from left to right
-    * ``y``: The vertical position of this frame within the sheet, from top to bottom
-    * ``w``: The width of this frame within the sheet
-    * ``h``: The width of this frame within the sheet
-  * ``rotated``: *true* if this frame has been rotated when packing, *false* if not (270-degree clockwise rotation by default)
-  * ``trimmed``: *true* if this frame has been trimmed when packing, *false* if not (removed fully empty columns/rows of pixels)
-  * ``spriteSourceSize``: Data for non-empty columns/rows of pixels
-    * ``x``: The horizontal position of this frame within the sprite, from left to right
-    * ``y``: The vertical position of this frame within the sprite, from top to bottom
-    * ``w``: The width of this frame within the sprite
-    * ``h``: The width of this frame within the sprite
-  * ``sourceSize``: Data related to sprite size
-    * ``w``: The width of this sprite
-    * ``h``: The height of this sprite
+  * ``filename``: [string]The name of the animation plus the file extension (normally a .png)
+  * ``frame``: [Struct]Data related to this frame within the sheet
+    * ``x``: [int]The horizontal position of this frame within the sheet, from left to right
+    * ``y``: [int]The vertical position of this frame within the sheet, from top to bottom
+    * ``w``: [int]The width of this frame within the sheet
+    * ``h``: [int]The width of this frame within the sheet
+  * ``rotated``: [bool]*true* if this frame has been rotated when packing, *false* if not (270-degree clockwise rotation by default)
+  * ``trimmed``: [bool]*true* if this frame has been trimmed when packing, *false* if not (removed fully empty columns/rows of pixels)
+  * ``spriteSourceSize``: [Struct]Data for non-empty columns/rows of pixels
+    * ``x``: [int]The horizontal position of this frame within the sprite, from left to right
+    * ``y``: [int]The vertical position of this frame within the sprite, from top to bottom
+    * ``w``: [int]The width of this frame within the sprite
+    * ``h``: [int]The width of this frame within the sprite
+  * ``sourceSize``: [Struct]Data related to sprite size
+    * ``w``: [int]The width of this sprite
+    * ``h``: [int]The height of this sprite
     
-    
-<table width=100%>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>sourceSize.w</td>
-<td>uint</td>
-<td>The width of this sprite</td>
-</tr>
-</table>
 
 Structure
 
